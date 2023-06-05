@@ -1,0 +1,35 @@
+$mainColor: #ff0000;
+
+.wow-enter {
+  opacity: 0;
+}
+.wow-enter-active {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.red {
+  color: $mainColor;
+}
+
+@mixin 함수() {
+  background: #eeeeee;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.my-alert {
+  @include 함수();
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.my-alert2 {
+  @extend .my-alert;
+  background: #ffe591;
+}
